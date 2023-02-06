@@ -18,4 +18,6 @@ model users {
   email     String
   password  String
   is_active Boolean
+  provider  String  @unique
+  subject   String  @unique
 }

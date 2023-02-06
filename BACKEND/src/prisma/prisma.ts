@@ -2,13 +2,7 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-prisma.$connect()
-
-export const getUser: any = async () => prisma.users.findMany()
-
-// const getToken = async () => {
-//   const token = await prisma.users.
-// }
+export const getUser: any = async userid => await prisma.users.findFirst(userid)
 
 export const registerUser = async (
   name: string,
@@ -16,7 +10,7 @@ export const registerUser = async (
   email: string,
   password: string,
 ) => {
-  return prisma.users.create({
+  return await prisma.users.create({
     data: {
       email,
       is_active: true,
@@ -28,7 +22,11 @@ export const registerUser = async (
 }
 
 export const getAllUsers = async () => {
-  return prisma.users.findMany({
+  return await prisma.users.findMany({
     where: { is_active: true },
   })
+}
+
+export const findOrCreateUser = async username => {
+  return await prisma.users.findFirst({ where: { username } })
 }

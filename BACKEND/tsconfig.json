@@ -4,8 +4,9 @@
     "outDir": "dist",
     "rootDir": "src",
     "strict": true,
+    "noImplicitAny": false,
     "lib": [
-      "esnext"
+      "es2021"
     ],
     "esModuleInterop": true
   }
