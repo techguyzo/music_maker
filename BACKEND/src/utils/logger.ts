@@ -1,9 +1,10 @@
-const { createLogger, format, transports } = require('winston')
+import { createLogger, format, transports } from 'winston'
 
 const { combine, printf, timestamp } = format
 
 const myFormat = printf(
-  ({ level, message }) => `${level}: ${JSON.stringify(message)}`
+  ({ level, message }: { level: string; message: string }) =>
+    `${level}: ${JSON.stringify(message)}`,
 )
 
 const logger = createLogger({
@@ -30,8 +31,8 @@ if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new transports.Console({
       format: combine(timestamp(), myFormat),
-    })
+    }),
   )
 }
 
-module.exports = logger
+export default logger
