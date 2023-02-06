@@ -1,0 +1,6 @@
+node_modules
+.env
+.npmrc
+pnpm-lock.yaml
+logs
+.idea
