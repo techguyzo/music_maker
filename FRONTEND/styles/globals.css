@@ -70,7 +70,7 @@ body {
 
 .animation-glow-outside:hover {
   animation: glow 1.5s ease-in-out infinite;
-  @apply border-gray-800 bg-pink-500 py-2.5 px-5 text-white transition-colors;
+  @apply border-gray-800 bg-pink-500 py-2.5 px-4 text-white transition-colors;
 }
 
 .animation-bounce {

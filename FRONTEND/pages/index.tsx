@@ -1,5 +1,4 @@
 "use client";
-import Header from "@/components/Header";
 import Head from "next/head";
 import LoginPage from "./login_page";
 
@@ -17,7 +16,6 @@ export default function Home() {
       </Head>
       <div className="flex flex-col justify-center items-center">
         <p className="text-6xl">HIT THE IMAGE HARD!!</p>
-        {/* <Header /> */}
         <div className="flex justify-center items-center bg-pink-300 bg-opacity-50 h-full w-full mb-10">
           <LoginPage />
         </div>

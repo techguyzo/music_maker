@@ -1,0 +1,28 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* .slick-initialized {
+  padding: 1rem;
+} */
+
+.slick-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: 80%;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* .slick-next {
+  right: 6rem;
+} */
+/* .slick-prev {
+  padding-left: 8rem;
+} */
